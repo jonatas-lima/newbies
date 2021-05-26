@@ -1,12 +1,14 @@
 import re
 
+# verifca o tamanho da tenha
 def check_tamanho(senha):
     return len(senha) >= 8
 
+# verifica se a senha possui numeros
 def check_numero(senha):
-    match = re.search("\d", senha)
-    return match != None
+    return re.search("\d", senha) != None
 
+# verifica se a senha possui pelo menos uma maiuscula
 def check_maiuscula(senha):
     return re.search("[A-Z]", senha) != None
 
